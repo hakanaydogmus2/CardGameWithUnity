@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int opponentScore;
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI opponentText;
+    public TextMeshProUGUI ManyCards;
 
     private GameObject[] container;
     int totalCards;
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-
+        ManyCards.text = "Cards:" + cards.Length;
         
     }
 
@@ -111,7 +112,7 @@ public class GameManager : MonoBehaviour
             playerHand[i].transform.position = new Vector3(playerX, -7.5f, 0.5f);
             playerHand[i].transform.localScale = new Vector3(50, 50, playerZ);
             playerHand[i].transform.localRotation = new Quaternion(0,0,0,0);
-            RemoveElement(ref cards, 0);
+            cards = RemoveElement(cards, 0);
             Instantiate(playerHand[i]);
             playerX -= 2.5f;
             playerZ++;
@@ -126,7 +127,7 @@ public class GameManager : MonoBehaviour
             opponentHand[i].transform.position = new Vector3(opponentX, 7.5f, 0.5f);
             opponentHand[i].transform.localScale = new Vector3(50, 50, opponentZ);
             opponentHand[i].transform.localRotation = new Quaternion(0, 1, 0, 0);
-            RemoveElement(ref cards, 0);
+            cards = RemoveElement(cards, 0);
             Instantiate(opponentHand[i]);
             opponentX -= 2.5f;
             opponentZ++;
@@ -136,17 +137,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("hands created");
         
     }
-    private void RemoveElement<T>(ref T[] arr, int index)
+    private T[] RemoveElement<T>(T[] arr, int index)
     {
-        for (int i = index ; i < arr.Length -1; i++) 
-        {
-            arr[i] = arr[i + 1];
-
-        }
-
-        Array.Resize(ref arr, arr.Length -1);
+        List<T> list = new List<T>(arr);
+        list.RemoveAt(index);
+        return list.ToArray();
     }
-    
+
     //private void Shuffle(GameObject[] deck)
     //{
     //    for (int i = 0; i < deck.Length; i++)
@@ -167,17 +164,22 @@ public class GameManager : MonoBehaviour
         {
             cards[i] = deck.transform.GetChild(i).gameObject;
         }
+        cards = Shuffle(cards);
+    }
+    private T[] Shuffle<T>(T[] array)
+    {
         System.Random rng = new System.Random();
-        int n = cards.Length;
-
+        int n = array.Length;
         while (n > 1)
         {
             n--;
             int k = rng.Next(n + 1);
-            GameObject value = cards[k];
-            cards[k] = cards[n];
-            cards[n] = value;
+            T value = array[k];
+            array[k] = array[n];
+            array[n] = value;
         }
+        return array;
     }
+
 
 }
