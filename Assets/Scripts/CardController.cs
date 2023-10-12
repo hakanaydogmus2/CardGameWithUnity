@@ -27,6 +27,7 @@ public class CardController : MonoBehaviour
             gameManager.playerCard = gameObject; 
             gameManager.playerCardValue = GetCardValue(gameObject); 
             transform.position = new Vector3(0, -0.100000001f, 0.5f);
+            
             gameManager.CardSelecter();
             gameManager.scoreCalculator();
         }

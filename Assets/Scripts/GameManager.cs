@@ -33,32 +33,26 @@ public class GameManager : MonoBehaviour
     CardAttributes cardAttributes;
     CardController cardController;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
-        createCards();
-        CreateHands();
-        Debug.Log("alektamovik");
-        opponentHand[1].transform.position = new Vector3(1, 1, 1);
-        Debug.Log("movik");
+
+        
     }
 
     void Awake()
     {
-
+        createCards();
+        CreateHands();
     }
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(opponentCard.transform.position, Vector3.forward, out hit, 10f))
-        {
-            Debug.Log("Hit: " + hit.collider.gameObject.name);
-        }
+        
     }
     public void CardSelecter()
     {
@@ -77,9 +71,14 @@ public class GameManager : MonoBehaviour
             
         }
         int index = Array.IndexOf(opponentHand, opponentCard);
-
-        //RemoveElement(ref opponentHand, 0 );
-        opponentHand[index].transform.position =  new Vector3 (0, -0.100000001f, 0.5f);
+        
+        
+        
+        //RemoveElement(ref opponentHand, index);
+        Debug.Log("opponent card pos: " + opponentCard.transform.position);
+        opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);
+        
+        Debug.Log("opponent card pos: " + opponentCard.transform.position);
         Debug.Log("card moved");
         
     }
@@ -95,7 +94,9 @@ public class GameManager : MonoBehaviour
         {
             opponentScore++;
             opponentText.text = "Puan: " + opponentScore;
-        }              
+        }
+        
+
     }
 
     private void CreateHands()
@@ -178,5 +179,5 @@ public class GameManager : MonoBehaviour
             cards[n] = value;
         }
     }
-    
+
 }
