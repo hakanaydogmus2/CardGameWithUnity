@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int opponentScore;
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI opponentText;
-    public TextMeshProUGUI ManyCards;
+    public TextMeshProUGUI ManyCardsText;
 
     private GameObject[] container;
     int totalCards;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        ManyCards.text = "Cards:" + cards.Length;
+        
         
     }
 
@@ -75,10 +75,13 @@ public class GameManager : MonoBehaviour
         
         
         
-        //RemoveElement(ref opponentHand, index);
+        RemoveElement(opponentHand, index);
+
         Debug.Log("opponent card pos: " + opponentCard.transform.position);
-        opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);
-        
+        opponentHand[index].transform.position =  new Vector3 (0, -0.100000001f, 0.5f);
+        Debug.Log(opponentCard.transform.localRotation);
+        opponentHand[index].transform.localRotation = new Quaternion(0,1,0,0);
+        Debug.Log(opponentCard.transform.localRotation);
         Debug.Log("opponent card pos: " + opponentCard.transform.position);
         Debug.Log("card moved");
         
@@ -119,6 +122,9 @@ public class GameManager : MonoBehaviour
             
 
         }
+        playerZ = 5;
+        playerX = 10;
+
         int opponentZ = 5;
         float opponentX = 5;
         for (int i = 0; i < 4; i++)
@@ -134,7 +140,10 @@ public class GameManager : MonoBehaviour
             
 
         }
+        opponentZ = 5;
+        opponentX = 5;
         Debug.Log("hands created");
+        ManyCardsText.text = "Cards: " + cards.Length;
         
     }
     private T[] RemoveElement<T>(T[] arr, int index)
