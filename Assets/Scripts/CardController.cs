@@ -44,6 +44,7 @@ public class CardController : MonoBehaviour
      void OnMouseExit()
     {
         Cursor.SetCursor(cursorTexture2, hotspot2, CursorMode.Auto);
+        
     }
     private void OnMouseDown()
     {
@@ -51,10 +52,14 @@ public class CardController : MonoBehaviour
         {
             gameManager.playerCard = gameObject; 
             gameManager.playerCardValue = GetCardValue(gameObject); 
-            transform.position = new Vector3(0, -0.100000001f, 0.5f);
+            gameManager.playerCard.transform.position = new Vector3(0, -0.100000001f, 0.5f);
             
             gameManager.CardSelecter();
             gameManager.scoreCalculator();
+            Debug.Log("opponentCard pos:" + gameManager.opponentCard.transform.position);
+            gameManager.opponentCard.transform.position =  new Vector3(6.5f, -0.1f, 0.5f);
+            gameManager.opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            Debug.Log("opponentCard pos:" + gameManager.opponentCard.transform.position);
         }
 
     }

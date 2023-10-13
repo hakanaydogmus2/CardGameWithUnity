@@ -5,7 +5,7 @@ using TMPro;
 using System.Runtime.CompilerServices;
 using System;
 using Random = UnityEngine.Random;
-
+using System.Drawing;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,14 +40,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        
-        
+        CreateHands();
+
     }
 
     void Awake()
     {
         createCards();
-        CreateHands();
+        
     }
 
     // Update is called once per frame
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void CardSelecter()
+    public GameObject CardSelecter()
     {
         Debug.Log("card selecter called");
         // maximum card value for opponent
@@ -71,20 +71,14 @@ public class GameManager : MonoBehaviour
             }
             
         }
+
         int index = Array.IndexOf(opponentHand, opponentCard);
         
+        opponentCard = opponentHand[index];
+        return opponentCard;
+        //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
         
-        
-        RemoveElement(opponentHand, index);
-
-        Debug.Log("opponent card pos: " + opponentCard.transform.position);
-        opponentHand[index].transform.position =  new Vector3 (0, -0.100000001f, 0.5f);
-        Debug.Log(opponentCard.transform.localRotation);
-        opponentHand[index].transform.localRotation = new Quaternion(0,1,0,0);
-        Debug.Log(opponentCard.transform.localRotation);
-        Debug.Log("opponent card pos: " + opponentCard.transform.position);
-        Debug.Log("card moved");
-        
+      
     }
 
     public void scoreCalculator()
@@ -92,15 +86,22 @@ public class GameManager : MonoBehaviour
         if(playerCardValue > opponentCardValue)
         {
             playerScore++;
-            playerText.text = "Puan: " + playerScore;
+            playerText.text = "Point: " + playerScore;
         }
         else if(playerCardValue < opponentCardValue)
         {
             opponentScore++;
-            opponentText.text = "Puan: " + opponentScore;
+            opponentText.text = "Point: " + opponentScore;
         }
-        
+        else
+        {
+            playerScore++;
+            opponentScore++;
+            opponentText.text = "Point: " + opponentScore;
+            playerText.text = "Point: " + playerScore; 
+        }
 
+        
     }
 
     private void CreateHands()
@@ -122,8 +123,6 @@ public class GameManager : MonoBehaviour
             
 
         }
-        playerZ = 5;
-        playerX = 10;
 
         int opponentZ = 5;
         float opponentX = 5;
@@ -140,8 +139,6 @@ public class GameManager : MonoBehaviour
             
 
         }
-        opponentZ = 5;
-        opponentX = 5;
         Debug.Log("hands created");
         ManyCardsText.text = "Cards: " + cards.Length;
         
@@ -174,6 +171,7 @@ public class GameManager : MonoBehaviour
             cards[i] = deck.transform.GetChild(i).gameObject;
         }
         cards = Shuffle(cards);
+
     }
     private T[] Shuffle<T>(T[] array)
     {
