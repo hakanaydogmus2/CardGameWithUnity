@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
 
         CreateHands();
-
+        
     }
 
     void Awake()
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public GameObject CardSelecter()
     {
@@ -73,13 +73,14 @@ public class GameManager : MonoBehaviour
         }
 
         int index = Array.IndexOf(opponentHand, opponentCard);
-        
+        //RemoveElement(ref opponentHand, index);
         opponentCard = opponentHand[index];
         return opponentCard;
         //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
         
       
     }
+    
 
     public void scoreCalculator()
     {
@@ -116,7 +117,7 @@ public class GameManager : MonoBehaviour
             playerHand[i].transform.position = new Vector3(playerX, -7.5f, 0.5f);
             playerHand[i].transform.localScale = new Vector3(50, 50, playerZ);
             playerHand[i].transform.localRotation = new Quaternion(0,0,0,0);
-            cards = RemoveElement(cards, 0);
+            RemoveElement(ref cards, 0);
             Instantiate(playerHand[i]);
             playerX -= 2.5f;
             playerZ++;
@@ -132,8 +133,8 @@ public class GameManager : MonoBehaviour
             opponentHand[i].transform.position = new Vector3(opponentX, 7.5f, 0.5f);
             opponentHand[i].transform.localScale = new Vector3(50, 50, opponentZ);
             opponentHand[i].transform.localRotation = new Quaternion(0, 1, 0, 0);
-            cards = RemoveElement(cards, 0);
-            Instantiate(opponentHand[i]);
+            RemoveElement(ref cards, 0);
+            opponentHand[i] = Instantiate(opponentHand[i]);
             opponentX -= 2.5f;
             opponentZ++;
             
@@ -143,12 +144,17 @@ public class GameManager : MonoBehaviour
         ManyCardsText.text = "Cards: " + cards.Length;
         
     }
-    private T[] RemoveElement<T>(T[] arr, int index)
+    public static void RemoveElement<T>(ref T[] arr, int index)
     {
-        List<T> list = new List<T>(arr);
-        list.RemoveAt(index);
-        return list.ToArray();
+        for (int a = index; a < arr.Length - 1; a++)
+        {
+            
+            arr[a] = arr[a + 1];
+        }
+        
+        Array.Resize(ref arr, arr.Length - 1);
     }
+
 
     //private void Shuffle(GameObject[] deck)
     //{
