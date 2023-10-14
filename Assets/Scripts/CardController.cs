@@ -61,7 +61,7 @@ public class CardController : MonoBehaviour
                 gameManager.playerCardValue = GetCardValue(gameObject);
                 gameManager.playerCard.transform.position = new Vector3(0, -0.100000001f, 0.5f);
                 Vector3 nt = gameManager.playerCard.transform.localScale = new Vector3(50, 50, 1);
-                gameManager.CardSelecter();
+                gameManager.CardSelector(true);
                 gameManager.scoreCalculator();
                 
                 gameManager.opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);

@@ -6,7 +6,7 @@ public class CardAttributes : MonoBehaviour
 {
 
     public int value;
-    public string[] suits = { "Sinek", "Maca", "Karo", "Kupa" };
+    
 
 
     // Start is called before the first frame update

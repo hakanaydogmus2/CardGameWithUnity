@@ -6,6 +6,9 @@ using System.Runtime.CompilerServices;
 using System;
 using Random = UnityEngine.Random;
 using System.Drawing;
+using System.Linq;
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -56,60 +59,66 @@ public class GameManager : MonoBehaviour
     {
 
     }
-    
-    public GameObject CardSelecter()
+
+    public GameObject CardSelector(bool isPlayerFirst)
     {
         Debug.Log("card selecter called");
         // maximum card value for opponent
-        
-        
-        foreach (GameObject card in opponentHand)
-        {
-            if( card.GetComponent<CardAttributes>().value > opponentCardValue && isPlayerFirst == false)
-            {
-                
-                opponentCardValue = card.GetComponent<CardAttributes>().value;
-                opponentCard = card;
-                
-            }
-            
-            else if(isPlayerFirst)
-            {
-                if(opponentCard == null)
-                {
-                    opponentCardValue = int.MaxValue;
-                }
-                
-                
-                if(card.GetComponent<CardAttributes>().value > playerCardValue && card.GetComponent<CardAttributes>().value < opponentCardValue)
-                {
-                    opponentCard = card;
-                    opponentCardValue = card.GetComponent<CardAttributes>().value;
-                    
-                }
-                
-                else if(card.GetComponent<CardAttributes>().value < playerCardValue && card.GetComponent<CardAttributes>().value > opponentCardValue)
-                {
-                    
-                    opponentCard = card;
-                    opponentCardValue = card.GetComponent <CardAttributes>().value;
-                }
 
+        if (isPlayerFirst == false)
+        {
+            opponentCardValue = 0;
+            foreach (GameObject card in opponentHand)
+            {
+                if (card.GetComponent<CardAttributes>().value > opponentCardValue)
+                {
+
+                    opponentCardValue = card.GetComponent<CardAttributes>().value;
+                    opponentCard = card;
+
+                }
             }
-            
         }
+        else
+        {
+            List<CardAttributes> maxNumbers = new List<CardAttributes>();
+            List<CardAttributes> numbers = new List<CardAttributes>();
+            foreach(GameObject card in opponentHand)
+            {
+                CardAttributes vl = card.GetComponent<CardAttributes>();
+                numbers.Add(vl);
+
+                if(card.GetComponent<CardAttributes>().value > playerCardValue)
+                {
+                    CardAttributes value = card.GetComponent<CardAttributes>();
+                    maxNumbers.Add(value);
+                }
+               
+            }
+            if (maxNumbers.Count > 0)
+            {
+                
+                //opponentCardValue = maxNumbers.AsQueryable().Min();
+            }
+            else
+            {
+                //opponentCardValue = numbers.AsQueryable().Min();
+            }
+        }
+        
+
 
         int index = Array.IndexOf(opponentHand, opponentCard);
-        
+
         opponentCard = opponentHand[index];
 
         RemoveElement(ref opponentHand, index);
         return opponentCard;
         //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
-        
-      
+
+
     }
-    
+
 
     public void scoreCalculator()
     {
