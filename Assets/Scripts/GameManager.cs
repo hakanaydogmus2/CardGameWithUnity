@@ -27,14 +27,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI opponentText;
     public TextMeshProUGUI ManyCardsText;
 
-    private GameObject[] container;
-    int totalCards;
-    private GameObject[] holder;
     
+    int totalCards;
+    
+    public GameObject[] pile;
+
     CardAttributes cardAttributes;
     CardController cardController;
-
-    
+    public bool isPlayerFirst = true;
+    private int dif;
 
     // Start is called before the first frame update
     void Start()
@@ -55,26 +56,54 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    
     public GameObject CardSelecter()
     {
         Debug.Log("card selecter called");
         // maximum card value for opponent
-        opponentCardValue = 0;
-        foreach(GameObject card in opponentHand)
+        
+        
+        foreach (GameObject card in opponentHand)
         {
-            if(card.GetComponent<CardAttributes>().value > opponentCardValue)
+            if( card.GetComponent<CardAttributes>().value > opponentCardValue && isPlayerFirst == false)
             {
-                Debug.Log("Card Position Before: " + card.transform.position);
+                
                 opponentCardValue = card.GetComponent<CardAttributes>().value;
                 opponentCard = card;
-                Debug.Log("Card Position After: " + card.transform.position);
+                
+            }
+            
+            else if(isPlayerFirst)
+            {
+                if(opponentCard == null)
+                {
+                    opponentCardValue = int.MaxValue;
+                }
+                
+                
+                if(card.GetComponent<CardAttributes>().value > playerCardValue && card.GetComponent<CardAttributes>().value < opponentCardValue)
+                {
+                    opponentCard = card;
+                    opponentCardValue = card.GetComponent<CardAttributes>().value;
+                    
+                }
+                
+                else if(card.GetComponent<CardAttributes>().value < playerCardValue && card.GetComponent<CardAttributes>().value > opponentCardValue)
+                {
+                    
+                    opponentCard = card;
+                    opponentCardValue = card.GetComponent <CardAttributes>().value;
+                }
+
             }
             
         }
 
         int index = Array.IndexOf(opponentHand, opponentCard);
-        //RemoveElement(ref opponentHand, index);
+        
         opponentCard = opponentHand[index];
+
+        RemoveElement(ref opponentHand, index);
         return opponentCard;
         //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
         
@@ -102,7 +131,7 @@ public class GameManager : MonoBehaviour
             playerText.text = "Point: " + playerScore; 
         }
 
-        
+ 
     }
 
     private void CreateHands()
@@ -118,7 +147,8 @@ public class GameManager : MonoBehaviour
             playerHand[i].transform.localScale = new Vector3(50, 50, playerZ);
             playerHand[i].transform.localRotation = new Quaternion(0,0,0,0);
             RemoveElement(ref cards, 0);
-            Instantiate(playerHand[i]);
+            
+            playerHand[i] = Instantiate(playerHand[i]);
             playerX -= 2.5f;
             playerZ++;
             
