@@ -119,11 +119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -131,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -139,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 625a1b694d9bf454ea6f900d711436d0, type: 3}
       propertyPath: m_LocalRotation.z
@@ -212,11 +212,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 4
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384003159003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347,11 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 4
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384091369864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -482,11 +472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 5
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384173122623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,11 +505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e002d9a98ed1ada40b5fbecb22ab0689, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e002d9a98ed1ada40b5fbecb22ab0689, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e002d9a98ed1ada40b5fbecb22ab0689, type: 3}
       propertyPath: m_LocalPosition.y
@@ -617,11 +602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 4
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384204289777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -752,11 +732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 12
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384210650260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,11 +862,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 8
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384230902642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,11 +992,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 5
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384313568321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1060,11 +1025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f56c611ee86cf54d99e43961cfd6d3f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f56c611ee86cf54d99e43961cfd6d3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5f56c611ee86cf54d99e43961cfd6d3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1157,11 +1122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 9
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384326023277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1195,11 +1155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36360c12a6623f94f813098c06e74a10, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36360c12a6623f94f813098c06e74a10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 36360c12a6623f94f813098c06e74a10, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1292,11 +1252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 12
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384349469662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1330,15 +1285,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1346,7 +1301,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1354,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c613a166e38964249b90f3849aeecbd2, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1427,11 +1382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384351822323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,11 +1512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384354781096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1680,11 +1625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 9
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!114 &8825452522831122365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,11 +1772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 7
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384383950043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1967,11 +1902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 5
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384396167412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2102,11 +2032,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 11
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384442236580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2237,11 +2162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384465871063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2355,11 +2275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 12
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!114 &8414928857128205111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2507,11 +2422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 6
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384536205224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2545,15 +2455,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2561,7 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2569,7 +2479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ce4ed33de5f7874c82df132cb2e06d9, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2642,11 +2552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384579214206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2777,11 +2682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 11
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384602945798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2815,11 +2715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b4f101821a976641865e1afd1fad89c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b4f101821a976641865e1afd1fad89c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7b4f101821a976641865e1afd1fad89c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2912,11 +2812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 3
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384605050367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3047,11 +2942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 6
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384622995594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3085,15 +2975,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3101,7 +2991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3109,7 +2999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ac91e5593af8ca4f8137a558dfaf8f2, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3182,11 +3072,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 8
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384682501494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3220,7 +3105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3228,7 +3113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3236,7 +3121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3244,7 +3129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c7a44176f2063cc48863fa81dbb2d0b2, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3317,11 +3202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 11
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384782926050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3355,11 +3235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cafbd75bb165b3c4b8df30b4080d7f27, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cafbd75bb165b3c4b8df30b4080d7f27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cafbd75bb165b3c4b8df30b4080d7f27, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3452,11 +3332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 13
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384798689880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3587,11 +3462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 14
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384816254112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3629,11 +3499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3641,7 +3511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3649,7 +3519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5ed5e9b1f70bb544cb4ea990bba41bef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3722,11 +3592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 9
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384828762608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3760,11 +3625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90a50e6dbd636c84295b725a2bf625eb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90a50e6dbd636c84295b725a2bf625eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 90a50e6dbd636c84295b725a2bf625eb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3857,11 +3722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 13
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384866974863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3895,15 +3755,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3911,7 +3771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3919,7 +3779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7450257b07d30ee45b5b72c5754e7c0c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -3992,11 +3852,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 3
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384871910645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4127,11 +3982,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 3
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964384909285436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4262,11 +4112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385025516968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4397,11 +4242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 14
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385029117802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4435,11 +4275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 844ae378b328e784fb6bcecb1c18e9f5, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 844ae378b328e784fb6bcecb1c18e9f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 844ae378b328e784fb6bcecb1c18e9f5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4532,11 +4372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385102176378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4570,7 +4405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4578,7 +4413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4586,7 +4421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4594,7 +4429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7c35a63a60497664bac4e1b96da1b04f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4667,11 +4502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 6
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385133620878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4802,11 +4632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 12
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385201680623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4937,11 +4762,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 14
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385223654561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5072,11 +4892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 13
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385240840085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5110,11 +4925,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75a891c2b1c784f4da76061244438046, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75a891c2b1c784f4da76061244438046, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75a891c2b1c784f4da76061244438046, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5207,11 +5022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385296089745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5342,11 +5152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 7
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385301154395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5380,7 +5185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5388,7 +5193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5396,7 +5201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5404,7 +5209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 583df4c94e347e24a9f62996eb9bd886, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5477,11 +5282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 5
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385309361933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5515,15 +5315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.5
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5531,7 +5331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalRotation.x
@@ -5539,7 +5339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d1d6e7d66abdd21488c3409dc86a8314, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5612,11 +5412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 3
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385312417321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5747,11 +5542,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385371187783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5882,11 +5672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 8
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385457297189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6017,11 +5802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 6
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385558616641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6055,15 +5835,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6071,7 +5851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6079,7 +5859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 464cdfddb63bd3c408457cb626984107, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6152,11 +5932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 7
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385607801210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6190,11 +5965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73f139cb661472d46af4e88f82175051, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73f139cb661472d46af4e88f82175051, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73f139cb661472d46af4e88f82175051, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6287,11 +6062,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 13
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385625400272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6329,11 +6099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6341,7 +6111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6349,7 +6119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 562d9024df022824badf74c951979904, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6422,11 +6192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 9
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385732983376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6460,11 +6225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f2151ce02311614b8387ec98d6596e9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f2151ce02311614b8387ec98d6596e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4f2151ce02311614b8387ec98d6596e9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6557,11 +6322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 4
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385936454451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6595,11 +6355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 692951e1fcd6eca45bfaeeadc4647e0c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 692951e1fcd6eca45bfaeeadc4647e0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 692951e1fcd6eca45bfaeeadc4647e0c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6692,11 +6452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 14
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385938481579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6827,11 +6582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 11
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964385989717473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6962,11 +6712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 8
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa
 --- !u!1001 &8356964386034872720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7097,8 +6842,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 7
-  suits:
-  - Sinek
-  - Maca
-  - Karo
-  - Kupa

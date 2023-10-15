@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject deck;
     public GameObject playerCard;
     public GameObject[] playerHand;
-    public GameObject[] opponentHand;
+    [SerializeField] private List<GameObject> opponentHand;
 
     
     public int playerCardValue;
@@ -81,38 +81,37 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            List<CardAttributes> maxNumbers = new List<CardAttributes>();
-            List<CardAttributes> numbers = new List<CardAttributes>();
+            List<int> validCardValues = new List<int>();
             foreach(GameObject card in opponentHand)
             {
-                CardAttributes vl = card.GetComponent<CardAttributes>();
-                numbers.Add(vl);
-
-                if(card.GetComponent<CardAttributes>().value > playerCardValue)
+                int cardValue = card.GetComponent<CardAttributes>().value;
+                if(cardValue > playerCardValue)
                 {
-                    CardAttributes value = card.GetComponent<CardAttributes>();
-                    maxNumbers.Add(value);
+                    validCardValues.Add(cardValue);
                 }
-               
+
             }
-            if (maxNumbers.Count > 0)
+            if (validCardValues.Count > 0)
             {
-                
-                //opponentCardValue = maxNumbers.AsQueryable().Min();
+                opponentCardValue = validCardValues.Min();               
+                opponentCard = opponentHand.First(card => card.GetComponent<CardAttributes>().value == opponentCardValue);
             }
             else
             {
-                //opponentCardValue = numbers.AsQueryable().Min();
+                opponentCardValue = opponentHand.Min(card => card.GetComponent<CardAttributes>().value);
+                opponentCard = opponentHand.First(card => card.GetComponent<CardAttributes>().value == opponentCardValue);
             }
         }
         
+            
+        
 
 
-        int index = Array.IndexOf(opponentHand, opponentCard);
+        int index = opponentHand.IndexOf(opponentCard);
 
         opponentCard = opponentHand[index];
 
-        RemoveElement(ref opponentHand, index);
+        opponentHand.RemoveAt(index);
         return opponentCard;
         //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
 
@@ -168,7 +167,7 @@ public class GameManager : MonoBehaviour
         float opponentX = 5;
         for (int i = 0; i < 4; i++)
         {
-            opponentHand[i] = cards[0];           
+            opponentHand.Add(cards[0]);           
             opponentHand[i].transform.position = new Vector3(opponentX, 7.5f, 0.5f);
             opponentHand[i].transform.localScale = new Vector3(50, 50, opponentZ);
             opponentHand[i].transform.localRotation = new Quaternion(0, 1, 0, 0);
@@ -231,6 +230,18 @@ public class GameManager : MonoBehaviour
             array[n] = value;
         }
         return array;
+    }
+    public void nextTurn()
+    {
+        if (opponentHand.Count == 0)
+        {
+            
+            CreateHands();
+        }
+        else
+        {
+            Debug.Log("it cannot");
+        }
     }
 
 
