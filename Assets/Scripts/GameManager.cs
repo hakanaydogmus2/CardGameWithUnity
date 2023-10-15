@@ -7,12 +7,10 @@ using System;
 using Random = UnityEngine.Random;
 using System.Drawing;
 using System.Linq;
-
-
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class GameManager : MonoBehaviour
 {
-
     public GameObject[] cards;
 
     public GameObject deck;
@@ -39,8 +37,7 @@ public class GameManager : MonoBehaviour
     CardController cardController;
     public bool isPlayerFirst = true;
     private int dif;
-
-    // Start is called before the first frame update
+    public bool isAiPlayed;    // Start is called before the first frame update
     void Start()
     {
 
@@ -78,6 +75,7 @@ public class GameManager : MonoBehaviour
 
                 }
             }
+          
         }
         else
         {
@@ -98,20 +96,29 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                opponentCardValue = opponentHand.Min(card => card.GetComponent<CardAttributes>().value);
-                opponentCard = opponentHand.First(card => card.GetComponent<CardAttributes>().value == opponentCardValue);
+                if(opponentHand.Max(card => card.GetComponent<CardAttributes>().value) == playerCardValue)
+                {
+                    opponentCardValue = opponentHand.Max(card => card.GetComponent<CardAttributes>().value);
+                    opponentCard = opponentHand.First(card => card.GetComponent<CardAttributes>().value == opponentCardValue);
+                }
+                else
+                {
+                    opponentCardValue = opponentHand.Min(card => card.GetComponent<CardAttributes>().value);
+                    opponentCard = opponentHand.First(card => card.GetComponent<CardAttributes>().value == opponentCardValue);
+                }
+
             }
         }
         
-            
+        if(opponentHand.Count != 0)
+        {
+            int index = opponentHand.IndexOf(opponentCard);
+
+            opponentCard = opponentHand[index];
+
+            opponentHand.RemoveAt(index);
+        }    
         
-
-
-        int index = opponentHand.IndexOf(opponentCard);
-
-        opponentCard = opponentHand[index];
-
-        opponentHand.RemoveAt(index);
         return opponentCard;
         //opponentCard.transform.position =  new Vector3 (0, -0.100000001f, 0.5f);      
 
@@ -194,17 +201,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //private void Shuffle(GameObject[] deck)
-    //{
-    //    for (int i = 0; i < deck.Length; i++)
-    //    {
-    //        container[0] = deck[i];
-    //        int randomIndex = Random.Range(i,deck.Length);
-    //        deck[i] = deck[randomIndex];
-    //        deck[randomIndex] = container[0];
-    //    }
-    //    Debug.Log("cards shuffled");
-    //}
+
     void createCards()
     {
         totalCards = deck.transform.childCount;
@@ -237,6 +234,9 @@ public class GameManager : MonoBehaviour
         {
             
             CreateHands();
+            isPlayerFirst = !isPlayerFirst;
+
+            CardSelector(isPlayerFirst);
         }
         else
         {
