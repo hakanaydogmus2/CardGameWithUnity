@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> opponentHand;
 
     
-    public int playerCardValue;
+    public int? playerCardValue;
     [SerializeField] private int playerScore;
     public GameObject opponentCard;
     public int opponentCardValue;
@@ -31,13 +31,15 @@ public class GameManager : MonoBehaviour
     
     int totalCards;
     
-    public GameObject[] pile;
+    
 
     CardAttributes cardAttributes;
     CardController cardController;
     public bool isPlayerFirst = true;
     private int dif;
-    public bool isAiPlayed;    // Start is called before the first frame update
+    public bool isAiPlayed;
+    private static float z = 5.0f;
+    [SerializeField] private List<GameObject> pile;
     void Start()
     {
 
@@ -75,9 +77,13 @@ public class GameManager : MonoBehaviour
 
                 }
             }
-          
+            opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
+            opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            opponentCard.transform.localScale = new Vector3(50f, 50f, z);
+            isAiPlayed = true;
+            z++;
         }
-        else
+        else if(playerCardValue != null)
         {
             List<int> validCardValues = new List<int>();
             foreach(GameObject card in opponentHand)
@@ -166,7 +172,11 @@ public class GameManager : MonoBehaviour
             playerHand[i] = Instantiate(playerHand[i]);
             playerX -= 2.5f;
             playerZ++;
-            
+
+            if(cards.Length == 2)
+            {
+                break;
+            }
 
         }
 
@@ -182,6 +192,10 @@ public class GameManager : MonoBehaviour
             opponentHand[i] = Instantiate(opponentHand[i]);
             opponentX -= 2.5f;
             opponentZ++;
+            if (cards.Length == 0)
+            {
+                break;
+            }
             
 
         }
@@ -228,15 +242,17 @@ public class GameManager : MonoBehaviour
         }
         return array;
     }
-    public void nextTurn()
+    public void NextTurn()
     {
+        playerCardValue = null;
+
         if (opponentHand.Count == 0)
         {
-            
+            DeactiveCards();
             CreateHands();
-            isPlayerFirst = !isPlayerFirst;
-
-            CardSelector(isPlayerFirst);
+            isPlayerFirst = !isPlayerFirst; 
+            
+            CardSelector(isPlayerFirst);            
         }
         else
         {
@@ -244,5 +260,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void DeactiveCards()
+    {
+        CardAttributes[] myItems = FindObjectsOfType<CardAttributes>();
+        Debug.Log("Found " + myItems.Length + " instances with this script attached");
+        foreach (CardAttributes item in myItems)
+        {
+            item.gameObject.SetActive(false);
+            pile.Add(item.gameObject);
+        }
+        Debug.Log(pile);
+        
+    }
+
+    private void GameEnder()
+    {
+        if(cards.Length == 0 && pile.Count == 52)
+        {
+            Debug.Log("GameOver");
+        }
+    }
 
 }
