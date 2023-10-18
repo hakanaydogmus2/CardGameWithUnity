@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> pile;
     void Start()
     {
-
+        
         CreateHands();
         
     }
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     public GameObject CardSelector(bool isPlayerFirst)
     {
         Debug.Log("card selecter called");
-        // maximum card value for opponent
+        
 
         if (isPlayerFirst == false)
         {
@@ -77,11 +77,13 @@ public class GameManager : MonoBehaviour
 
                 }
             }
-            opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
-            opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
-            opponentCard.transform.localScale = new Vector3(50f, 50f, z);
-            isAiPlayed = true;
-            z++;
+            StartCoroutine(OpponentCardWaiter());
+            //sleep one seconds for computer how can i do it
+            //opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
+            //opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            //opponentCard.transform.localScale = new Vector3(50f, 50f, z);
+            //isAiPlayed = true;
+            //z++;
         }
         else if(playerCardValue != null)
         {
@@ -248,6 +250,7 @@ public class GameManager : MonoBehaviour
 
         if (opponentHand.Count == 0)
         {
+            
             DeactiveCards();
             CreateHands();
             isPlayerFirst = !isPlayerFirst; 
@@ -280,5 +283,17 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameOver");
         }
     }
+    private IEnumerator OpponentCardWaiter()
+    {
+        yield return new WaitForSeconds(0.5f);
+        opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
+        opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        opponentCard.transform.localScale = new Vector3(50f, 50f, z);
+        isAiPlayed = true;
+        z++;
+        playerCard = null;
+    }
+
+
 
 }

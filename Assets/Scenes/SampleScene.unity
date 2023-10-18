@@ -504,7 +504,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1077975255}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: nextTurn
+        m_MethodName: NextTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1105,7 +1105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &918125454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,7 +1309,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   opponentHand: []
-  playerCardValue: 0
   playerScore: 0
   opponentCard: {fileID: 0}
   opponentCardValue: 0
@@ -1317,9 +1316,9 @@ MonoBehaviour:
   playerText: {fileID: 2071512452}
   opponentText: {fileID: 789613105}
   ManyCardsText: {fileID: 715438290}
-  pile: []
   isPlayerFirst: 1
   isAiPlayed: 0
+  pile: []
 --- !u!4 &1077975256
 Transform:
   m_ObjectHideFlags: 0
@@ -1707,8 +1706,8 @@ RectTransform:
   m_Father: {fileID: 732861364}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1887,7 +1886,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEditor;
 using UnityEngine;
 
@@ -60,21 +61,24 @@ public class CardController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray,out hit) )
         {
-            if (hit.collider.transform.position.y < -0.2f && gameManager.isPlayerFirst == true)
+            if (hit.collider.transform.position.y < -0.2f && gameManager.isPlayerFirst == true && gameManager.playerCard == null)
             {
                 
                 gameManager.playerCard = gameObject;
                 gameManager.playerCardValue = GetCardValue(gameObject);
                 gameManager.playerCard.transform.position = new Vector3(0, -0.100000001f, 0.5f);
                 gameManager.playerCard.transform.localScale = new Vector3(50, 50, zCounter);
-
-                gameManager.CardSelector(gameManager.isPlayerFirst);
-                gameManager.scoreCalculator();
                 
-                gameManager.opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
-                gameManager.opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
-                gameManager.opponentCard.transform.localScale = new Vector3(50f, 50f, zCounter);
-                zCounter++;
+                gameManager.CardSelector(gameManager.isPlayerFirst);
+                
+                StartCoroutine(OneSecondCardBringer());
+
+                //gameManager.opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
+                //gameManager.opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                //gameManager.opponentCard.transform.localScale = new Vector3(50f, 50f, zCounter);
+                //zCounter++;
+                
+                
             }
 
             if(hit.collider.transform.position.y < -0.2f && gameManager.isPlayerFirst == false && gameManager.isAiPlayed == true)
@@ -96,8 +100,17 @@ public class CardController : MonoBehaviour
     {
         CardAttributes cardAttributes = GetComponent<CardAttributes>();
 
-        return cardAttributes.value;
-        
+        return cardAttributes.value;        
+    }
+    private IEnumerator OneSecondCardBringer()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameManager.opponentCard.transform.position = new Vector3(6.5f, -0.1f, 0.5f);
+        gameManager.opponentCard.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        gameManager.opponentCard.transform.localScale = new Vector3(50f, 50f, zCounter);
+        zCounter++;
+        gameManager.scoreCalculator();
+        gameManager.playerCard = null;
     }
 
 }
