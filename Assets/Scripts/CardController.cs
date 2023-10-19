@@ -65,6 +65,7 @@ public class CardController : MonoBehaviour
             {
                 
                 gameManager.playerCard = gameObject;
+                gameManager.playerHand.Remove(gameManager.playerCard);
                 gameManager.playerCardValue = GetCardValue(gameObject);
                 gameManager.playerCard.transform.position = new Vector3(0, -0.100000001f, 0.5f);
                 gameManager.playerCard.transform.localScale = new Vector3(50, 50, zCounter);
@@ -84,6 +85,8 @@ public class CardController : MonoBehaviour
             if(hit.collider.transform.position.y < -0.2f && gameManager.isPlayerFirst == false && gameManager.isAiPlayed == true)
             {
                 gameManager.playerCard = gameObject;
+                gameManager.playerHand.Remove(gameManager.playerCard);
+
                 gameManager.playerCardValue = GetCardValue(gameObject);
                 gameManager.playerCard.transform.position = new Vector3(0, -0.100000001f, 0.5f);
                 gameManager.playerCard.transform.localScale = new Vector3(50, 50, zCounter);
@@ -111,6 +114,8 @@ public class CardController : MonoBehaviour
         zCounter++;
         gameManager.scoreCalculator();
         gameManager.playerCard = null;
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(gameManager.GameEnder());
     }
 
 }
